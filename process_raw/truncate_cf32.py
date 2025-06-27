@@ -39,12 +39,6 @@ def truncate_cf32_file(file_path, samples_to_remove):
         new_total_samples = (file_size_bytes - bytes_to_skip) // bytes_per_sample
         print(f"New estimated size: {(file_size_bytes - bytes_to_skip) / 1e6:.2f} MB ({new_total_samples:,} samples)")
 
-        # --- User Confirmation ---
-        confirm = input("Are you sure you want to permanently modify this file? (yes/no): ").lower()
-        if confirm not in ['yes', 'y']:
-            print("Operation cancelled by user.")
-            return False
-
         # --- Read the data that will be kept ---
         print("\nReading data to keep...")
         with open(file_path, 'rb') as f:

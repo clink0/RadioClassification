@@ -108,7 +108,7 @@ def plot_training_history(history):
 
 if __name__ == '__main__':
     # --- Configuration ---
-    DATA_FILE = 'cnn_ready_data.npz'
+    DATA_FILE = '/Users/lukebray/School/Research/SDR/RadioClassification/data/training/cnn_ready_data.npz'
 
     # --- Main Workflow ---
 
